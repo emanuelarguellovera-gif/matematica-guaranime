@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="gn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matemática Guaraníme — Eñemoarandu matemática nde ñe'ẽme</title>
+  <meta name="description" content="Plataforma educativa para aprender matemáticas básicas en idioma guaraní, pensada para estudiantes de secundaria de Paraguay.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Bootstrap Icons CDN for clean vector icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#inicio" class="logo">
+        <div class="logo-icon">
+          <i class="bi bi-calculator"></i>
+        </div>
+        <div>Matemática <span>Guaraníme</span></div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#inicio" class="active">Ñepyrũ</a></li>
+          <li><a href="#mboepy">Mbo'epy</a></li>
+          <li><a href="#tembiapo">Tembiapo</a></li>
+          <li><a href="#neeryru">Ñe'ẽryru</a></li>
+          <li><a href="#mbaeichapa">Mba'éichapa</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="#tembiapo" class="btn btn-primary header-btn">
+          <i class="bi bi-play-circle-fill"></i> Eñepyrũ ko'ág̃a
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO PRINCIPAL
+       ========================================================================== -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge-tag red">
+          <i class="bi bi-star-fill"></i> Tembiapo Mbo'ehao — Paraguay
+        </div>
+        <h1>Eikuaa <span class="highlight">matemática</span> guaraníme</h1>
+        <p class="hero-subtitle">
+          Eñemoarandu, eñeha'ã ha eikuaa matemática nde ñe'ẽme. Aprende, practica y descubre las matemáticas en el idioma guaraní de manera sencilla e interactiva.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#tembiapo" class="btn btn-primary">
+            <i class="bi bi-lightning-charge-fill"></i> Eñepyrũ
+          </a>
+          <a href="#mboepy" class="btn btn-outline">
+            <i class="bi bi-book-half"></i> Ehecha Mbo'epykuéra
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">6+</span>
+            <span class="stat-label">Mbo'epy (Lecciones)</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">25+</span>
+            <span class="stat-label">Ñe'ẽ (Palabras)</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Guaraní / Español</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="floating-badge b1">
+          <div class="floating-badge-icon" style="background: var(--accent-red);">
+            <i class="bi bi-plus-slash-minus"></i>
+          </div>
+          <div>
+            <div>Ñembojoja</div>
+            <div style="font-weight: 500; font-size: 0.78rem; color: var(--text-muted);">2 + 3 = 5 (po)</div>
+          </div>
+        </div>
+
+        <div class="floating-badge b2">
+          <div class="floating-badge-icon" style="background: var(--accent-teal);">
+            <i class="bi bi-triangle"></i>
+          </div>
+          <div>
+            <div>Takambyapy</div>
+            <div style="font-weight: 500; font-size: 0.78rem; color: var(--text-muted);">3 yke / 3 lados</div>
+          </div>
+        </div>
+
+        <div class="hero-img-card">
+          <img src="assets/hero.png" alt="Matemática Guaraníme — Ilustración Educativa">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN MBO'EPY (LECCIONES INTERACTIVAS)
+       ========================================================================== -->
+  <section class="section bg-alt" id="mboepy">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="badge-tag">
+          <i class="bi bi-journal-bookmark-fill"></i> Mbo'epykuéra
+        </div>
+        <h2 class="section-title">Mbo'epy (Lecciones Matemáticas)</h2>
+        <p class="section-subtitle">
+          Eikuaa papapykuéra, mba'eapo ha ta'angakuéra guaraníme con ejemplos sencillos y herramientas interactivas.
+        </p>
+      </div>
+
+      <div class="lessons-grid">
+
+        <!-- Card 1: Papapykuéra (Números) -->
+        <div class="lesson-card">
+          <div class="lesson-card-header">
+            <div class="lesson-icon icon-numbers">
+              <i class="bi bi-123"></i>
+            </div>
+            <div class="lesson-title-box">
+              <h3>Papapykuéra</h3>
+              <div class="es-title">Números y Numeración</div>
+            </div>
+          </div>
+          <p class="lesson-desc">
+            Los números en guaraní siguen un sistema decimal muy claro: 1=peteĩ, 2=mokõi, 3=mbohapy, 4=irundy, 5=po (mano), 10=pa, 100=sa.
+          </p>
+
+          <div class="interactive-demo-box">
+            <div style="font-weight: 700; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--primary-navy);">
+              <i class="bi bi-arrow-repeat"></i> Conversor de Papapy (Emoĩ papapy):
+            </div>
+            <div class="number-converter">
+              <div class="converter-controls">
+                <input type="number" id="converter-num" class="converter-input" value="5" min="1" max="999">
+                <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted);">=</span>
+              </div>
+              <div class="converter-result">
+                <span class="guarani-text" id="guarani-num-text">po</span>
+                <span class="math-breakdown" id="guarani-num-breakdown">Desglose: 5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Ñembojoja (Suma) -->
+        <div class="lesson-card">
+          <div class="lesson-card-header">
+            <div class="lesson-icon icon-sum">
+              <i class="bi bi-plus-lg"></i>
+            </div>
+            <div class="lesson-title-box">
+              <h3>Ñembojoja</h3>
+              <div class="es-title">Suma / Adición</div>
+            </div>
+          </div>
+          <p class="lesson-desc">
+            La suma es unir o añadir cantidades. En guaraní expresamos la adición indicando los números que se unen.
+          </p>
+
+          <div class="interactive-demo-box">
+            <div class="math-example-box">
+              <div class="math-equation">2 + 3 = 5</div>
+              <div class="math-guarani-phrase">“mokõi ha mbohapy oñembojoja, oiko po”</div>
+              <div class="visual-dots">
+                <span class="dot red">1</span>
+                <span class="dot red">2</span>
+                <span style="font-weight: 800;">+</span>
+                <span class="dot gold">1</span>
+                <span class="dot gold">2</span>
+                <span class="dot gold">3</span>
+                <span style="font-weight: 800;">=</span>
+                <span class="dot green">5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Ñemboguejy (Resta) -->
+        <div class="lesson-card">
+          <div class="lesson-card-header">
+            <div class="lesson-icon icon-sub">
+              <i class="bi bi-dash-lg"></i>
+            </div>
+            <div class="lesson-title-box">
+              <h3>Ñemboguejy</h3>
+              <div class="es-title">Resta / Sustracción</div>
+            </div>
+          </div>
+          <p class="lesson-desc">
+            La resta consiste en quitar o disminuir una cantidad. Significa "hacer bajar" o quitar elementos.
+          </p>
+
+          <div class="interactive-demo-box">
+            <div class="math-example-box">
+              <div class="math-equation">7 - 3 = 4</div>
+              <div class="math-guarani-phrase">“pokõi mba'égui ñanohẽ mbohapy, opyta irundy”</div>
+              <div class="visual-dots">
+                <span class="dot red">1</span>
+                <span class="dot red">2</span>
+                <span class="dot red">3</span>
+                <span class="dot red">4</span>
+                <span class="dot gold" style="opacity: 0.35; text-decoration: line-through;">5</span>
+                <span class="dot gold" style="opacity: 0.35; text-decoration: line-through;">6</span>
+                <span class="dot gold" style="opacity: 0.35; text-decoration: line-through;">7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Ñembohetave (Multiplicación) -->
+        <div class="lesson-card">
+          <div class="lesson-card-header">
+            <div class="lesson-icon icon-mul">
+              <i class="bi bi-x-lg"></i>
+            </div>
+            <div class="lesson-title-box">
+              <h3>Ñembohetave</h3>
+              <div class="es-title">Multiplicación</div>
+            </div>
+          </div>
+          <p class="lesson-desc">
+            Significa "hacer más" o multiplicar varias veces una misma cantidad. Utiliza la palabra "jey" (veces).
+          </p>
+
+          <div class="interactive-demo-box">
+            <div class="math-example-box">
+              <div class="math-equation">3 × 4 = 12</div>
+              <div class="math-guarani-phrase">“mbohapy jey irundy ha'e pa mokõi”</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.4rem;">
+                3 veces 4 = 12 (4 + 4 + 4)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Ñemboja'o (División) -->
+        <div class="lesson-card">
+          <div class="lesson-card-header">
+            <div class="lesson-icon icon-div">
+              <i class="bi bi-slash-lg"></i>
+            </div>
+            <div class="lesson-title-box">
+              <h3>Ñemboja'o</h3>
+              <div class="es-title">División / Reparto</div>
+            </div>
+          </div>
+          <p class="lesson-desc">
+            Es repartir o dividir un total en partes exactamente iguales ("pehẽ ojueheguápe").
+          </p>
+
+          <div class="interactive-demo-box">
+            <div class="math-example-box">
+              <div class="math-equation">12 ÷ 3 = 4</div>
+              <div class="math-guarani-phrase">“pa mokõi oñemboja'o mbohapy pehẽme ha'e irundy”</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.4rem;">
+                12 repartido en 3 partes = 4
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Geometría (Ta'angakuéra) -->
+        <div class="lesson-card">
+          <div class="lesson-card-header">
+            <div class="lesson-icon icon-geo">
+              <i class="bi bi-bounding-box-circles"></i>
+            </div>
+            <div class="lesson-title-box">
+              <h3>Ta'angakuéra</h3>
+              <div class="es-title">Geometría / Formas</div>
+            </div>
+          </div>
+          <p class="lesson-desc">
+            Estudio de las figuras geométricas: apu'a (círculo), kua'ada (cuadrado), takambyapy (triángulo) ha takambyirundy (rectángulo).
+          </p>
+
+          <div class="interactive-demo-box">
+            <div class="geo-shapes-grid">
+              <div class="geo-shape-item active" data-shape="apua">
+                <svg class="geo-shape-svg" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="40" fill="none" stroke="var(--primary-blue)" stroke-width="6"/>
+                </svg>
+                <span class="geo-shape-name">Apu'a</span>
+                <span class="geo-shape-sub">Círculo</span>
+              </div>
+              <div class="geo-shape-item" data-shape="kuada">
+                <svg class="geo-shape-svg" viewBox="0 0 100 100">
+                  <rect x="15" y="15" width="70" height="70" fill="none" stroke="var(--accent-red)" stroke-width="6" rx="4"/>
+                </svg>
+                <span class="geo-shape-name">Kua'ada</span>
+                <span class="geo-shape-sub">Cuadrado</span>
+              </div>
+              <div class="geo-shape-item" data-shape="takambyapy">
+                <svg class="geo-shape-svg" viewBox="0 0 100 100">
+                  <polygon points="50,15 90,85 10,85" fill="none" stroke="var(--accent-emerald)" stroke-width="6"/>
+                </svg>
+                <span class="geo-shape-name">Takambyapy</span>
+                <span class="geo-shape-sub">Triángulo</span>
+              </div>
+              <div class="geo-shape-item" data-shape="takambyirundy">
+                <svg class="geo-shape-svg" viewBox="0 0 100 100">
+                  <rect x="10" y="25" width="80" height="50" fill="none" stroke="var(--accent-gold)" stroke-width="6" rx="4"/>
+                </svg>
+                <span class="geo-shape-name">Takambyirundy</span>
+                <span class="geo-shape-sub">Rectángulo</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 0.8rem; padding: 0.6rem; background: white; border-radius: 6px; font-size: 0.85rem;">
+              <strong id="geo-active-name" style="color: var(--primary-navy);">Apu'a</strong> 
+              <span id="geo-active-es" style="color: var(--text-muted);">(Círculo)</span>:
+              <div id="geo-active-desc" style="color: var(--text-muted); margin-top: 0.2rem;">
+                Ndaipori takamby. Hembeyke apu'apamánte. (Sin esquinas. Línea curva cerrada continua).
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN EÑEMBOKATUPYRY (EJERCICIOS INTERACTIVOS / QUIZ)
+       ========================================================================== -->
+  <section class="section" id="tembiapo">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="badge-tag red">
+          <i class="bi bi-controller"></i> Tembiapo Interactive
+        </div>
+        <h2 class="section-title">Eñembokatupyry (Ejercicios de Práctica)</h2>
+        <p class="section-subtitle">
+          Pone a prueba tus conocimientos en matemáticas y guaraní. Selecciona la respuesta correcta, acumula puntos y aprende con la explicación.
+        </p>
+      </div>
+
+      <div class="quiz-wrapper">
+
+        <!-- Quiz Display Box -->
+        <div id="quiz-box">
+          <div class="quiz-header">
+            <div class="quiz-progress-box">
+              <div class="progress-info">
+                <span>Porandu (Pregunta)</span>
+                <span id="quiz-progress-text">1 / 6</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="quiz-progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="score-badge">
+              <i class="bi bi-trophy-fill"></i>
+              <span id="quiz-score-num">0</span> <span style="font-size: 0.8rem;">pts</span>
+            </div>
+          </div>
+
+          <div class="question-box">
+            <h3 class="question-title" id="quiz-question-title">Mboypa 2 + 3?</h3>
+            <div class="question-translation" id="quiz-question-sub">¿Cuánto es 2 + 3 en guaraní?</div>
+
+            <div class="options-grid" id="quiz-options-grid">
+              <!-- Creadas dinámicamente por app.js -->
+            </div>
+
+            <div class="feedback-box" id="quiz-feedback">
+              <div id="quiz-feedback-text"></div>
+            </div>
+          </div>
+
+          <div class="quiz-footer">
+            <button class="btn btn-primary" id="quiz-next-btn" style="display: none;">
+              Tenonde gotyo (Siguiente) <i class="bi bi-arrow-right-short" style="font-size: 1.3rem;"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Results Screen -->
+        <div class="quiz-results" id="quiz-results-screen">
+          <div class="results-icon">
+            <i class="bi bi-award-fill"></i>
+          </div>
+          <h2 class="results-title">¡Pahague! (¡Completado!)</h2>
+          <div class="results-msg-guarani" id="results-msg-guarani">¡Iporãiterei! Nde rembiapo porãite.</div>
+          <div class="results-score-text" id="results-score-text">Puntuación final: 60 de 60 puntos (100%)</div>
+
+          <button class="btn btn-primary" id="quiz-restart-btn">
+            <i class="bi bi-arrow-counterclockwise"></i> Jey eñeha'ã (Intentar de nuevo)
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN ÑE'ẼRYRU MATEMÁTIKA (DICCIONARIO BILINGÜE)
+       ========================================================================== -->
+  <section class="section bg-alt" id="neeryru">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="badge-tag gold">
+          <i class="bi bi-translate"></i> Ñe'ẽryru
+        </div>
+        <h2 class="section-title">Ñe'ẽryru Matemátika (Diccionario Matemático)</h2>
+        <p class="section-subtitle">
+          Glosario de términos matemáticos en Guaraní Paraguayo con su definición en Español.
+        </p>
+      </div>
+
+      <div class="dictionary-controls">
+        <div class="search-box-wrap">
+          <i class="bi bi-search search-icon"></i>
+          <input type="text" class="search-input" id="dict-search-input" placeholder="Ekañe'ẽ... (Buscar palabra en guaraní o español)">
+        </div>
+
+        <div class="filter-tags">
+          <button class="filter-chip active" data-category="all">Opaite (Todos)</button>
+          <button class="filter-chip" data-category="papapykuera">Papapykuéra (Números)</button>
+          <button class="filter-chip" data-category="mbaeapo">Mba'eapo (Operaciones)</button>
+          <button class="filter-chip" data-category="taanga">Ta'angakuéra (Geometría)</button>
+        </div>
+      </div>
+
+      <div class="dictionary-grid" id="dictionary-grid">
+        <!-- Renderizado dinámicamente desde app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN MBA'ÉICHAPA (¿POR QUÉ MATEMÁTICA EN EL DÍA A DÍA?)
+       ========================================================================== -->
+  <section class="section" id="mbaeichapa">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="badge-tag green">
+          <i class="bi bi-lightbulb-fill"></i> Mba'érepa ñaikotevẽ
+        </div>
+        <h2 class="section-title">Mba'éichapa ñaikotevẽ matemática?</h2>
+        <p class="section-subtitle">
+          ¿Por qué necesitamos y usamos la matemática en nuestra vida cotidiana?
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="bi bi-cart-check-fill"></i>
+          </div>
+          <h3>Jogua ha Venta (Compras y Comercio)</h3>
+          <p>
+            Al ir al almacén o al mercado a comprar chipa, tereré o provisiones, usamos la suma y la resta para calcular el precio total y verificar nuestro vuelto.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="bi bi-stopwatch-fill"></i>
+          </div>
+          <h3>Ára ha Pukukue (Tiempo y Distancia)</h3>
+          <p>
+            Para calcular a qué hora tomar el colectivo, cuánto tarda el viaje a la escuela o medir las dimensiones de una cancha de fútbol en metros.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="bi bi-palette-fill"></i>
+          </div>
+          <h3>Artesanía ha Geometría (Ñandutí)</h3>
+          <p>
+            Las hermosas artesanías paraguayas como el Ñandutí y el Ao Po'i requieren geometría: simetría, círculos (apu'a), cuadrados y conteo preciso de hilos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="color: white; margin-bottom: 0.8rem;">
+            <div class="logo-icon">
+              <i class="bi bi-calculator"></i>
+            </div>
+            <div>Matemática <span style="color: var(--accent-red);">Guaraníme</span></div>
+          </div>
+          <p>
+            Matemática Guaraníme — Ñaikuaa hag̃ua matemática ñane ñe'ẽme. Plataforma educativa interactiva pensada para promover el aprendizaje del guaraní a través de la matemática.
+          </p>
+          <div class="school-badge">
+            <i class="bi bi-mortarboard-fill"></i> Tembiapo Mbo'ehao — Proyecto Educativo Escolar
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Mbo'epykuéra</h4>
+          <ul>
+            <li><a href="#mboepy">Papapykuéra (Números)</a></li>
+            <li><a href="#mboepy">Ñembojoja (Suma)</a></li>
+            <li><a href="#mboepy">Ñemboguejy (Resta)</a></li>
+            <li><a href="#mboepy">Ñembohetave (Multiplicación)</a></li>
+            <li><a href="#mboepy">Ñemboja'o (División)</a></li>
+            <li><a href="#mboepy">Ta'angakuéra (Geometría)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Ñanderehe</h4>
+          <ul>
+            <li><a href="#inicio">Ñepyrũ (Inicio)</a></li>
+            <li><a href="#tembiapo">Eñembokatupyry (Ejercicios)</a></li>
+            <li><a href="#neeryru">Ñe'ẽryru (Diccionario)</a></li>
+            <li><a href="#mbaeichapa">Mba'éichapa (Aplicación)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 Matemática Guaraníme. Tembiapo educativo escolar — Paraguay.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Main App -->
+  <script src="app.js"></script>
+</body>
+</html>

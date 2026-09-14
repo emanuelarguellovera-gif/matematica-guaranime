@@ -1,0 +1,1183 @@
+/* ==========================================================================
+   MATEMÁTICA GUARANÍME — Design System & CSS Styles
+   Estilo Moderno, Juvenil e Inspirado en la Cultura Paraguaya
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --primary-navy: #0B192C;
+  --primary-blue: #1E3A8A;
+  --accent-red: #D90429;
+  --accent-gold: #FFB703;
+  --accent-emerald: #06D6A0;
+  --accent-teal: #0284C7;
+  
+  --bg-main: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-alt: #F1F5F9;
+  
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-light: #94A3B8;
+
+  --border-color: #E2E8F0;
+  --shadow-sm: 0 2px 4px rgba(11, 25, 44, 0.05);
+  --shadow-md: 0 10px 25px -5px rgba(11, 25, 44, 0.08), 0 8px 10px -6px rgba(11, 25, 44, 0.04);
+  --shadow-lg: 0 20px 35px -10px rgba(11, 25, 44, 0.12), 0 10px 15px -5px rgba(11, 25, 44, 0.06);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  /* Pattern de fondo sutil inspirado en geometría de Ñandutí */
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(2, 132, 199, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(217, 4, 41, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(255, 183, 3, 0.03) 0%, transparent 60%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-heading);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--primary-navy);
+  line-height: 1.25;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title-wrap {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0.5rem auto 0;
+}
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(2, 132, 199, 0.1);
+  color: var(--accent-teal);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.8rem;
+}
+
+.badge-tag.red {
+  background: rgba(217, 4, 41, 0.1);
+  color: var(--accent-red);
+}
+
+.badge-tag.gold {
+  background: rgba(255, 183, 3, 0.15);
+  color: #B45309;
+}
+
+.badge-tag.green {
+  background: rgba(6, 214, 160, 0.15);
+  color: #047857;
+}
+
+/* Header & Nav */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--primary-navy);
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 10px rgba(30, 58, 138, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-icon::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,183,3,0.3) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.logo span {
+  color: var(--accent-red);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  transition: var(--transition);
+  position: relative;
+  padding: 0.3rem 0;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--primary-blue);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2.5px;
+  background: var(--accent-red);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+  width: 100%;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-red), #B8001F);
+  color: white;
+  box-shadow: 0 4px 14px rgba(217, 4, 41, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(217, 4, 41, 0.4);
+}
+
+.btn-secondary {
+  background: var(--primary-navy);
+  color: white;
+  box-shadow: 0 4px 14px rgba(11, 25, 44, 0.25);
+}
+
+.btn-secondary:hover {
+  background: #1A2E46;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  background: rgba(30, 58, 138, 0.03);
+}
+
+.mobile-menu-btn {
+  display: none;
+  font-size: 1.6rem;
+  color: var(--primary-navy);
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-content h1 .highlight {
+  color: var(--accent-red);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-content h1 .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 183, 3, 0.35);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  font-family: var(--font-heading);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.hero-image-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid white;
+  background: white;
+  transform: perspective(1000px) rotateY(-4deg) rotateX(2deg);
+  transition: var(--transition);
+}
+
+.hero-img-card:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+.hero-img-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Floating Math Badges in Hero */
+.floating-badge {
+  position: absolute;
+  padding: 0.8rem 1.2rem;
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  animation: float 4s ease-in-out infinite alternate;
+  z-index: 2;
+}
+
+.floating-badge.b1 {
+  top: 10%;
+  left: -20px;
+  animation-delay: 0s;
+}
+
+.floating-badge.b2 {
+  bottom: 12%;
+  right: -15px;
+  animation-delay: 1.5s;
+}
+
+.floating-badge-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-12px); }
+}
+
+/* Section Container Layout */
+.section {
+  padding: 5rem 0;
+}
+
+.bg-alt {
+  background-color: var(--bg-alt);
+  position: relative;
+}
+
+/* Mbo'epy (Lecciones) Cards Grid */
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.lesson-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.lesson-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(30, 58, 138, 0.2);
+}
+
+.lesson-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.lesson-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.icon-numbers { background: linear-gradient(135deg, #0284C7, #0369A1); }
+.icon-sum { background: linear-gradient(135deg, #10B981, #047857); }
+.icon-sub { background: linear-gradient(135deg, #EF4444, #B91C1C); }
+.icon-mul { background: linear-gradient(135deg, #F59E0B, #D97706); }
+.icon-div { background: linear-gradient(135deg, #8B5CF6, #6D28D9); }
+.icon-geo { background: linear-gradient(135deg, #EC4899, #BE185D); }
+
+.lesson-title-box h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.lesson-title-box .es-title {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.lesson-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.interactive-demo-box {
+  background: var(--bg-alt);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  margin-top: auto;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Interactive Number Converter Widget */
+.number-converter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.converter-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.converter-input {
+  width: 70px;
+  padding: 0.5rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: var(--font-heading);
+}
+
+.converter-input:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+}
+
+.converter-result {
+  background: white;
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--accent-teal);
+  display: flex;
+  flex-direction: column;
+}
+
+.converter-result .guarani-text {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+}
+
+.converter-result .math-breakdown {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Operations Interactive Visualizers */
+.math-example-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: white;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.math-equation {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  font-family: var(--font-heading);
+}
+
+.math-guarani-phrase {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-red);
+}
+
+.visual-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--primary-blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.dot.red { background: var(--accent-red); }
+.dot.gold { background: var(--accent-gold); }
+.dot.green { background: var(--accent-emerald); }
+
+/* Geometry Interactive Shapes */
+.geo-shapes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.geo-shape-item {
+  background: white;
+  padding: 0.8rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.geo-shape-item:hover, .geo-shape-item.active {
+  border-color: var(--accent-teal);
+  background: rgba(2, 132, 199, 0.03);
+}
+
+.geo-shape-svg {
+  width: 48px;
+  height: 48px;
+}
+
+.geo-shape-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.geo-shape-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* SECTION: Ejercicios / Quiz (Eñembokatupyry) */
+.quiz-wrapper {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.quiz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--bg-alt);
+}
+
+.quiz-progress-box {
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.progress-bar-bg {
+  height: 10px;
+  background: var(--bg-alt);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-teal), var(--primary-blue));
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.score-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 183, 3, 0.15);
+  color: #B45309;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.question-box {
+  margin-bottom: 2rem;
+}
+
+.question-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 0.5rem;
+}
+
+.question-translation {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.option-btn {
+  background: var(--bg-alt);
+  border: 2px solid var(--border-color);
+  padding: 1.1rem 1.4rem;
+  border-radius: var(--radius-md);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+.option-btn:hover:not(:disabled) {
+  border-color: var(--primary-blue);
+  background: rgba(30, 58, 138, 0.04);
+  transform: translateY(-2px);
+}
+
+.option-btn.correct {
+  background: rgba(6, 214, 160, 0.12) !important;
+  border-color: var(--accent-emerald) !important;
+  color: #047857 !important;
+}
+
+.option-btn.incorrect {
+  background: rgba(217, 4, 41, 0.1) !important;
+  border-color: var(--accent-red) !important;
+  color: var(--accent-red) !important;
+}
+
+.feedback-box {
+  padding: 1.2rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.feedback-box.correct {
+  display: block;
+  background: rgba(6, 214, 160, 0.12);
+  border: 1px solid var(--accent-emerald);
+  color: #047857;
+}
+
+.feedback-box.incorrect {
+  display: block;
+  background: rgba(217, 4, 41, 0.1);
+  border: 1px solid var(--accent-red);
+  color: #B8001F;
+}
+
+.feedback-title {
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quiz-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Quiz Result Screen */
+.quiz-results {
+  text-align: center;
+  padding: 2rem 1rem;
+  display: none;
+}
+
+.results-icon {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, var(--accent-gold), #F59E0B);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+}
+
+.results-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.results-msg-guarani {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--accent-red);
+  margin-bottom: 1rem;
+}
+
+.results-score-text {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* SECTION: Diccionario (Ñe'ẽryru Matemátika) */
+.dictionary-controls {
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-box-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 1.3rem;
+  color: var(--text-muted);
+}
+
+.search-input {
+  width: 100%;
+  padding: 1.1rem 1.2rem 1.1rem 3.2rem;
+  font-size: 1.05rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: white;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.search-input:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1);
+}
+
+.filter-tags {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-chip {
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  background: white;
+  border: 1.5px solid var(--border-color);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.filter-chip:hover, .filter-chip.active {
+  background: var(--primary-navy);
+  color: white;
+  border-color: var(--primary-navy);
+}
+
+.dictionary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.dict-card {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.dict-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(30, 58, 138, 0.2);
+}
+
+.dict-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.dict-guarani {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  font-family: var(--font-heading);
+}
+
+.dict-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.dict-spanish {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-red);
+  margin-bottom: 0.6rem;
+}
+
+.dict-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* SECTION: Mba'éichapa (Por qué Matemática en el día a día) */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.why-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.why-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(255, 183, 3, 0.15);
+  color: #B45309;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.why-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.why-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.footer {
+  background: var(--primary-navy);
+  color: white;
+  padding: 4rem 0 2rem;
+  margin-top: 4rem;
+  border-top: 4px solid var(--accent-red);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand h2 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-brand p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  max-width: 400px;
+}
+
+.footer-links h4 {
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  font-size: 0.92rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.88rem;
+}
+
+.school-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-top: 0.8rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtitle {
+    margin: 0 auto 2rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .floating-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .header-btn {
+    display: none;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-wrapper {
+    padding: 1.5rem;
+  }
+
+  .lessons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
